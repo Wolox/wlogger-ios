@@ -1,0 +1,21 @@
+profile
+*.moved-aside
+DerivedData
+.idea/
+
+# xcode noise
+build/*
+*.pbxuser
+xcuserdata
+Snapshots
+test-reports/
+*.xccheckout
+*.xcconfig
+
+# osx noise
+.DS_Store
+Thumbs.db
+
+# Carthage
+.carthage_cache.yml
+Carthage/
