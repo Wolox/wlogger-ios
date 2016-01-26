@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E14410B31C57F1C500834334 /* InternalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14410B21C57F1C500834334 /* InternalResult.swift */; };
+		E166FC831C57DCE2000AFAA5 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC821C57DCE2000AFAA5 /* Curry.framework */; };
+		E166FC841C57DCE2000AFAA5 /* Curry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC821C57DCE2000AFAA5 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1DA83BA1C39AF7B0019FB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DA83B91C39AF7B0019FB4E /* Assets.xcassets */; };
+		E1DA83C81C39AF7B0019FB4E /* WLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA83C71C39AF7B0019FB4E /* WLoggerTests.swift */; };
+		E1DA83D31C39AF7B0019FB4E /* WLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA83D21C39AF7B0019FB4E /* WLoggerUITests.swift */; };
+		E1DA83E51C39B5300019FB4E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA83E11C39B5300019FB4E /* ReactiveCocoa.framework */; };
+		E1DA83E61C39B5300019FB4E /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA83E11C39B5300019FB4E /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1DA83E71C39B5300019FB4E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA83E21C39B5300019FB4E /* Result.framework */; };
+		E1DA83E81C39B5300019FB4E /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA83E21C39B5300019FB4E /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1DA83F81C39BB720019FB4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA83F71C39BB720019FB4E /* AppDelegate.swift */; };
+		E1DA84021C39C3850019FB4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA84011C39C3850019FB4E /* User.swift */; };
+		E1EE41FA1C582154007E6993 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC7D1C56ED61000AFAA5 /* Argo.framework */; };
+		E1EE41FB1C582154007E6993 /* Argo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC7D1C56ED61000AFAA5 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1FC55071C41EBF300C7CC91 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC55061C41EBF300C7CC91 /* Alamofire.framework */; };
+		E1FC55081C41EBF300C7CC91 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC55061C41EBF300C7CC91 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1FC550A1C42C55900C7CC91 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55091C42C55900C7CC91 /* Project.swift */; };
+		E1FC550C1C42C58F00C7CC91 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC550B1C42C58F00C7CC91 /* Activity.swift */; };
+		E1FC550E1C42C5A200C7CC91 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC550D1C42C5A200C7CC91 /* Log.swift */; };
+		E1FC55111C42C6D200C7CC91 /* WeekLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FC55101C42C6D200C7CC91 /* WeekLogsViewController.xib */; };
+		E1FC55131C42C6EA00C7CC91 /* WeekLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55121C42C6EA00C7CC91 /* WeekLogsViewController.swift */; };
+		E1FC55151C42C72500C7CC91 /* WeekLogsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FC55141C42C72500C7CC91 /* WeekLogsTableViewController.xib */; };
+		E1FC55171C42C73800C7CC91 /* WeekLogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55161C42C73800C7CC91 /* WeekLogsTableViewController.swift */; };
+		E1FC551A1C42C90D00C7CC91 /* LogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FC55191C42C90D00C7CC91 /* LogTableViewCell.xib */; };
+		E1FC551C1C42C92700C7CC91 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC551B1C42C92700C7CC91 /* LogTableViewCell.swift */; };
+		E1FC551E1C42CC2D00C7CC91 /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC551D1C42CC2D00C7CC91 /* LogViewModel.swift */; };
+		E1FC55201C42D00100C7CC91 /* WeekLogsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC551F1C42D00100C7CC91 /* WeekLogsTableViewModel.swift */; };
+		E1FC55221C42DE2300C7CC91 /* LogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55211C42DE2300C7CC91 /* LogRepository.swift */; };
+		E1FC55241C42DE3100C7CC91 /* APILogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1DA83C41C39AF7B0019FB4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1DA83A71C39AF7B0019FB4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DA83AE1C39AF7B0019FB4E;
+			remoteInfo = WLogger;
+		};
+		E1DA83CF1C39AF7B0019FB4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1DA83A71C39AF7B0019FB4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DA83AE1C39AF7B0019FB4E;
+			remoteInfo = WLogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1DA83E91C39B5310019FB4E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1DA83E81C39B5300019FB4E /* Result.framework in Embed Frameworks */,
+				E1FC55081C41EBF300C7CC91 /* Alamofire.framework in Embed Frameworks */,
+				E1EE41FB1C582154007E6993 /* Argo.framework in Embed Frameworks */,
+				E1DA83E61C39B5300019FB4E /* ReactiveCocoa.framework in Embed Frameworks */,
+				E166FC841C57DCE2000AFAA5 /* Curry.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E14410B21C57F1C500834334 /* InternalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalResult.swift; sourceTree = "<group>"; };
+		E166FC7D1C56ED61000AFAA5 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		E166FC821C57DCE2000AFAA5 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		E1DA83AF1C39AF7B0019FB4E /* WLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DA83B91C39AF7B0019FB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1DA83BE1C39AF7B0019FB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DA83C31C39AF7B0019FB4E /* WLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DA83C71C39AF7B0019FB4E /* WLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLoggerTests.swift; sourceTree = "<group>"; };
+		E1DA83C91C39AF7B0019FB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DA83CE1C39AF7B0019FB4E /* WLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DA83D21C39AF7B0019FB4E /* WLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLoggerUITests.swift; sourceTree = "<group>"; };
+		E1DA83D41C39AF7B0019FB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DA83E01C39B5300019FB4E /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		E1DA83E11C39B5300019FB4E /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		E1DA83E21C39B5300019FB4E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E1DA83F71C39BB720019FB4E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
+		E1DA84011C39C3850019FB4E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		E1FC55061C41EBF300C7CC91 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E1FC55091C42C55900C7CC91 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = Model/Project.swift; sourceTree = "<group>"; };
+		E1FC550B1C42C58F00C7CC91 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Model/Activity.swift; sourceTree = "<group>"; };
+		E1FC550D1C42C5A200C7CC91 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Model/Log.swift; sourceTree = "<group>"; };
+		E1FC55101C42C6D200C7CC91 /* WeekLogsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeekLogsViewController.xib; path = WeekLogs/WeekLogsViewController.xib; sourceTree = "<group>"; };
+		E1FC55121C42C6EA00C7CC91 /* WeekLogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekLogsViewController.swift; path = WeekLogs/WeekLogsViewController.swift; sourceTree = "<group>"; };
+		E1FC55141C42C72500C7CC91 /* WeekLogsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeekLogsTableViewController.xib; path = WeekLogs/WeekLogsTableViewController.xib; sourceTree = "<group>"; };
+		E1FC55161C42C73800C7CC91 /* WeekLogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekLogsTableViewController.swift; path = WeekLogs/WeekLogsTableViewController.swift; sourceTree = "<group>"; };
+		E1FC55191C42C90D00C7CC91 /* LogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogTableViewCell.xib; path = WeekLogs/LogTableViewCell/LogTableViewCell.xib; sourceTree = "<group>"; };
+		E1FC551B1C42C92700C7CC91 /* LogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogTableViewCell.swift; path = WeekLogs/LogTableViewCell/LogTableViewCell.swift; sourceTree = "<group>"; };
+		E1FC551D1C42CC2D00C7CC91 /* LogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogViewModel.swift; path = WeekLogs/LogTableViewCell/LogViewModel.swift; sourceTree = "<group>"; };
+		E1FC551F1C42D00100C7CC91 /* WeekLogsTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekLogsTableViewModel.swift; path = WeekLogs/WeekLogsTableViewModel.swift; sourceTree = "<group>"; };
+		E1FC55211C42DE2300C7CC91 /* LogRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogRepository.swift; path = Repository/LogRepository.swift; sourceTree = "<group>"; };
+		E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APILogRepository.swift; path = Repository/APILogRepository.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1DA83AC1C39AF7B0019FB4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DA83E71C39B5300019FB4E /* Result.framework in Frameworks */,
+				E1FC55071C41EBF300C7CC91 /* Alamofire.framework in Frameworks */,
+				E1EE41FA1C582154007E6993 /* Argo.framework in Frameworks */,
+				E1DA83E51C39B5300019FB4E /* ReactiveCocoa.framework in Frameworks */,
+				E166FC831C57DCE2000AFAA5 /* Curry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DA83C01C39AF7B0019FB4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DA83CB1C39AF7B0019FB4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1DA83A61C39AF7B0019FB4E = {
+			isa = PBXGroup;
+			children = (
+				E1DA83B11C39AF7B0019FB4E /* WLogger */,
+				E1DA83EA1C39B5370019FB4E /* Frameworks */,
+				E1DA83C61C39AF7B0019FB4E /* WLoggerTests */,
+				E1DA83D11C39AF7B0019FB4E /* WLoggerUITests */,
+				E1DA83B01C39AF7B0019FB4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1DA83B01C39AF7B0019FB4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA83AF1C39AF7B0019FB4E /* WLogger.app */,
+				E1DA83C31C39AF7B0019FB4E /* WLoggerTests.xctest */,
+				E1DA83CE1C39AF7B0019FB4E /* WLoggerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1DA83B11C39AF7B0019FB4E /* WLogger */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC550F1C42C6A100C7CC91 /* WeekLogs */,
+				E1DA84031C39CAD10019FB4E /* Repository */,
+				E1DA84001C39C3740019FB4E /* Model */,
+				E1DA83F61C39BB590019FB4E /* Application */,
+				E1DA83B91C39AF7B0019FB4E /* Assets.xcassets */,
+				E1DA83BE1C39AF7B0019FB4E /* Info.plist */,
+			);
+			path = WLogger;
+			sourceTree = "<group>";
+		};
+		E1DA83C61C39AF7B0019FB4E /* WLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA83C71C39AF7B0019FB4E /* WLoggerTests.swift */,
+				E1DA83C91C39AF7B0019FB4E /* Info.plist */,
+			);
+			path = WLoggerTests;
+			sourceTree = "<group>";
+		};
+		E1DA83D11C39AF7B0019FB4E /* WLoggerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA83D21C39AF7B0019FB4E /* WLoggerUITests.swift */,
+				E1DA83D41C39AF7B0019FB4E /* Info.plist */,
+			);
+			path = WLoggerUITests;
+			sourceTree = "<group>";
+		};
+		E1DA83EA1C39B5370019FB4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC55061C41EBF300C7CC91 /* Alamofire.framework */,
+				E166FC7D1C56ED61000AFAA5 /* Argo.framework */,
+				E1DA83E01C39B5300019FB4E /* Box.framework */,
+				E166FC821C57DCE2000AFAA5 /* Curry.framework */,
+				E1DA83E11C39B5300019FB4E /* ReactiveCocoa.framework */,
+				E1DA83E21C39B5300019FB4E /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1DA83F61C39BB590019FB4E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA83F71C39BB720019FB4E /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		E1DA84001C39C3740019FB4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA84011C39C3850019FB4E /* User.swift */,
+				E1FC55091C42C55900C7CC91 /* Project.swift */,
+				E1FC550B1C42C58F00C7CC91 /* Activity.swift */,
+				E1FC550D1C42C5A200C7CC91 /* Log.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E1DA84031C39CAD10019FB4E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC55211C42DE2300C7CC91 /* LogRepository.swift */,
+				E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */,
+				E14410B21C57F1C500834334 /* InternalResult.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		E1FC550F1C42C6A100C7CC91 /* WeekLogs */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC55181C42C8EB00C7CC91 /* LogTableViewCell */,
+				E1FC55101C42C6D200C7CC91 /* WeekLogsViewController.xib */,
+				E1FC55121C42C6EA00C7CC91 /* WeekLogsViewController.swift */,
+				E1FC55141C42C72500C7CC91 /* WeekLogsTableViewController.xib */,
+				E1FC55161C42C73800C7CC91 /* WeekLogsTableViewController.swift */,
+				E1FC551F1C42D00100C7CC91 /* WeekLogsTableViewModel.swift */,
+			);
+			name = WeekLogs;
+			sourceTree = "<group>";
+		};
+		E1FC55181C42C8EB00C7CC91 /* LogTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC55191C42C90D00C7CC91 /* LogTableViewCell.xib */,
+				E1FC551B1C42C92700C7CC91 /* LogTableViewCell.swift */,
+				E1FC551D1C42CC2D00C7CC91 /* LogViewModel.swift */,
+			);
+			name = LogTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1DA83AE1C39AF7B0019FB4E /* WLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DA83D71C39AF7B0019FB4E /* Build configuration list for PBXNativeTarget "WLogger" */;
+			buildPhases = (
+				E1DA83AB1C39AF7B0019FB4E /* Sources */,
+				E1DA83AC1C39AF7B0019FB4E /* Frameworks */,
+				E1DA83AD1C39AF7B0019FB4E /* Resources */,
+				E1DA83E91C39B5310019FB4E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WLogger;
+			productName = WLogger;
+			productReference = E1DA83AF1C39AF7B0019FB4E /* WLogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1DA83C21C39AF7B0019FB4E /* WLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DA83DA1C39AF7B0019FB4E /* Build configuration list for PBXNativeTarget "WLoggerTests" */;
+			buildPhases = (
+				E1DA83BF1C39AF7B0019FB4E /* Sources */,
+				E1DA83C01C39AF7B0019FB4E /* Frameworks */,
+				E1DA83C11C39AF7B0019FB4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1DA83C51C39AF7B0019FB4E /* PBXTargetDependency */,
+			);
+			name = WLoggerTests;
+			productName = WLoggerTests;
+			productReference = E1DA83C31C39AF7B0019FB4E /* WLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E1DA83CD1C39AF7B0019FB4E /* WLoggerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DA83DD1C39AF7B0019FB4E /* Build configuration list for PBXNativeTarget "WLoggerUITests" */;
+			buildPhases = (
+				E1DA83CA1C39AF7B0019FB4E /* Sources */,
+				E1DA83CB1C39AF7B0019FB4E /* Frameworks */,
+				E1DA83CC1C39AF7B0019FB4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1DA83D01C39AF7B0019FB4E /* PBXTargetDependency */,
+			);
+			name = WLoggerUITests;
+			productName = WLoggerUITests;
+			productReference = E1DA83CE1C39AF7B0019FB4E /* WLoggerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1DA83A71C39AF7B0019FB4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Wolox;
+				TargetAttributes = {
+					E1DA83AE1C39AF7B0019FB4E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					E1DA83C21C39AF7B0019FB4E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = E1DA83AE1C39AF7B0019FB4E;
+					};
+					E1DA83CD1C39AF7B0019FB4E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = E1DA83AE1C39AF7B0019FB4E;
+					};
+				};
+			};
+			buildConfigurationList = E1DA83AA1C39AF7B0019FB4E /* Build configuration list for PBXProject "WLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1DA83A61C39AF7B0019FB4E;
+			productRefGroup = E1DA83B01C39AF7B0019FB4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1DA83AE1C39AF7B0019FB4E /* WLogger */,
+				E1DA83C21C39AF7B0019FB4E /* WLoggerTests */,
+				E1DA83CD1C39AF7B0019FB4E /* WLoggerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1DA83AD1C39AF7B0019FB4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1FC55151C42C72500C7CC91 /* WeekLogsTableViewController.xib in Resources */,
+				E1FC551A1C42C90D00C7CC91 /* LogTableViewCell.xib in Resources */,
+				E1DA83BA1C39AF7B0019FB4E /* Assets.xcassets in Resources */,
+				E1FC55111C42C6D200C7CC91 /* WeekLogsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DA83C11C39AF7B0019FB4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DA83CC1C39AF7B0019FB4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1DA83AB1C39AF7B0019FB4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1FC550E1C42C5A200C7CC91 /* Log.swift in Sources */,
+				E1FC551C1C42C92700C7CC91 /* LogTableViewCell.swift in Sources */,
+				E1FC55131C42C6EA00C7CC91 /* WeekLogsViewController.swift in Sources */,
+				E1FC55221C42DE2300C7CC91 /* LogRepository.swift in Sources */,
+				E14410B31C57F1C500834334 /* InternalResult.swift in Sources */,
+				E1FC550A1C42C55900C7CC91 /* Project.swift in Sources */,
+				E1FC55171C42C73800C7CC91 /* WeekLogsTableViewController.swift in Sources */,
+				E1DA83F81C39BB720019FB4E /* AppDelegate.swift in Sources */,
+				E1FC55201C42D00100C7CC91 /* WeekLogsTableViewModel.swift in Sources */,
+				E1DA84021C39C3850019FB4E /* User.swift in Sources */,
+				E1FC55241C42DE3100C7CC91 /* APILogRepository.swift in Sources */,
+				E1FC551E1C42CC2D00C7CC91 /* LogViewModel.swift in Sources */,
+				E1FC550C1C42C58F00C7CC91 /* Activity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DA83BF1C39AF7B0019FB4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DA83C81C39AF7B0019FB4E /* WLoggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DA83CA1C39AF7B0019FB4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DA83D31C39AF7B0019FB4E /* WLoggerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1DA83C51C39AF7B0019FB4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DA83AE1C39AF7B0019FB4E /* WLogger */;
+			targetProxy = E1DA83C41C39AF7B0019FB4E /* PBXContainerItemProxy */;
+		};
+		E1DA83D01C39AF7B0019FB4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DA83AE1C39AF7B0019FB4E /* WLogger */;
+			targetProxy = E1DA83CF1C39AF7B0019FB4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E1DA83D51C39AF7B0019FB4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1DA83D61C39AF7B0019FB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1DA83D81C39AF7B0019FB4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WLogger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WLogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E1DA83D91C39AF7B0019FB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WLogger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WLogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E1DA83DB1C39AF7B0019FB4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLogger.app/WLogger";
+			};
+			name = Debug;
+		};
+		E1DA83DC1C39AF7B0019FB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLogger.app/WLogger";
+			};
+			name = Release;
+		};
+		E1DA83DE1C39AF7B0019FB4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WLoggerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WLoggerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WLogger;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E1DA83DF1C39AF7B0019FB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WLoggerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WLoggerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WLogger;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1DA83AA1C39AF7B0019FB4E /* Build configuration list for PBXProject "WLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DA83D51C39AF7B0019FB4E /* Debug */,
+				E1DA83D61C39AF7B0019FB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1DA83D71C39AF7B0019FB4E /* Build configuration list for PBXNativeTarget "WLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DA83D81C39AF7B0019FB4E /* Debug */,
+				E1DA83D91C39AF7B0019FB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1DA83DA1C39AF7B0019FB4E /* Build configuration list for PBXNativeTarget "WLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DA83DB1C39AF7B0019FB4E /* Debug */,
+				E1DA83DC1C39AF7B0019FB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1DA83DD1C39AF7B0019FB4E /* Build configuration list for PBXNativeTarget "WLoggerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DA83DE1C39AF7B0019FB4E /* Debug */,
+				E1DA83DF1C39AF7B0019FB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1DA83A71C39AF7B0019FB4E /* Project object */;
+}
