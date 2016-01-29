@@ -19,4 +19,6 @@ public protocol LogRepositoryType {
 
     func getWeekLogs() -> SignalProducer<[Log], RepositoryError>
     
+    func getWeekLogsAmount() -> SignalProducer<String, RepositoryError>
+    
 }

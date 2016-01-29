@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10F6EDF1C595A630012B11C /* WeekLogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F6EDE1C595A630012B11C /* WeekLogsViewModel.swift */; };
+		E10F6EE11C5AA1DE0012B11C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E10F6EE01C5AA1DE0012B11C /* Localizable.strings */; };
+		E10F6EE41C5AA2710012B11C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F6EE31C5AA2710012B11C /* StringExtension.swift */; };
+		E10F6EE91C5AA7D80012B11C /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F6EE81C5AA7D80012B11C /* ImageFetcher.swift */; };
 		E14410B31C57F1C500834334 /* InternalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14410B21C57F1C500834334 /* InternalResult.swift */; };
 		E166FC831C57DCE2000AFAA5 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC821C57DCE2000AFAA5 /* Curry.framework */; };
 		E166FC841C57DCE2000AFAA5 /* Curry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC821C57DCE2000AFAA5 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -74,6 +78,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E10F6EDE1C595A630012B11C /* WeekLogsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekLogsViewModel.swift; path = WeekLogs/WeekLogsViewModel.swift; sourceTree = "<group>"; };
+		E10F6EE01C5AA1DE0012B11C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E10F6EE31C5AA2710012B11C /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		E10F6EE81C5AA7D80012B11C /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = Repository/Commons/ImageFetcher.swift; sourceTree = "<group>"; };
 		E14410B21C57F1C500834334 /* InternalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalResult.swift; sourceTree = "<group>"; };
 		E166FC7D1C56ED61000AFAA5 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		E166FC821C57DCE2000AFAA5 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
@@ -137,6 +145,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E10F6EE21C5AA25A0012B11C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E10F6EE31C5AA2710012B11C /* StringExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E10F6EE71C5AA5D10012B11C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E10F6EE81C5AA7D80012B11C /* ImageFetcher.swift */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
 		E1DA83A61C39AF7B0019FB4E = {
 			isa = PBXGroup;
 			children = (
@@ -161,12 +185,14 @@
 		E1DA83B11C39AF7B0019FB4E /* WLogger */ = {
 			isa = PBXGroup;
 			children = (
+				E10F6EE21C5AA25A0012B11C /* Extensions */,
 				E1FC550F1C42C6A100C7CC91 /* WeekLogs */,
 				E1DA84031C39CAD10019FB4E /* Repository */,
 				E1DA84001C39C3740019FB4E /* Model */,
 				E1DA83F61C39BB590019FB4E /* Application */,
 				E1DA83B91C39AF7B0019FB4E /* Assets.xcassets */,
 				E1DA83BE1C39AF7B0019FB4E /* Info.plist */,
+				E10F6EE01C5AA1DE0012B11C /* Localizable.strings */,
 			);
 			path = WLogger;
 			sourceTree = "<group>";
@@ -225,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				E1FC55211C42DE2300C7CC91 /* LogRepositoryType.swift */,
+				E10F6EE71C5AA5D10012B11C /* Commons */,
+				E1FC55211C42DE2300C7CC91 /* LogRepository.swift */,
 				E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */,
 				E14410B21C57F1C500834334 /* InternalResult.swift */,
 			);
@@ -237,6 +265,7 @@
 				E1FC55181C42C8EB00C7CC91 /* LogTableViewCell */,
 				E1FC55101C42C6D200C7CC91 /* WeekLogsViewController.xib */,
 				E1FC55121C42C6EA00C7CC91 /* WeekLogsViewController.swift */,
+				E10F6EDE1C595A630012B11C /* WeekLogsViewModel.swift */,
 				E1FC55141C42C72500C7CC91 /* WeekLogsTableViewController.xib */,
 				E1FC55161C42C73800C7CC91 /* WeekLogsTableViewController.swift */,
 				E1FC551F1C42D00100C7CC91 /* WeekLogsTableViewModel.swift */,
@@ -359,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10F6EE11C5AA1DE0012B11C /* Localizable.strings in Resources */,
 				E1FC55151C42C72500C7CC91 /* WeekLogsTableViewController.xib in Resources */,
 				E1FC551A1C42C90D00C7CC91 /* LogTableViewCell.xib in Resources */,
 				E1DA83BA1C39AF7B0019FB4E /* Assets.xcassets in Resources */,
@@ -388,12 +418,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1FC550E1C42C5A200C7CC91 /* Log.swift in Sources */,
+				E10F6EE91C5AA7D80012B11C /* ImageFetcher.swift in Sources */,
 				E1FC551C1C42C92700C7CC91 /* LogTableViewCell.swift in Sources */,
+				E10F6EE41C5AA2710012B11C /* StringExtension.swift in Sources */,
 				E1FC55131C42C6EA00C7CC91 /* WeekLogsViewController.swift in Sources */,
 				E1FC55221C42DE2300C7CC91 /* LogRepositoryType.swift in Sources */,
 				E14410B31C57F1C500834334 /* InternalResult.swift in Sources */,
 				E1FC550A1C42C55900C7CC91 /* Project.swift in Sources */,
 				E1FC55171C42C73800C7CC91 /* WeekLogsTableViewController.swift in Sources */,
+				E10F6EDF1C595A630012B11C /* WeekLogsViewModel.swift in Sources */,
 				E1DA83F81C39BB720019FB4E /* AppDelegate.swift in Sources */,
 				E1FC55201C42D00100C7CC91 /* WeekLogsTableViewModel.swift in Sources */,
 				E1DA84021C39C3850019FB4E /* User.swift in Sources */,

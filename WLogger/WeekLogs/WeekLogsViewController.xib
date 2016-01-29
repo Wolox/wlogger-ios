@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeekLogsViewController" customModule="WLogger" customModuleProvider="target">
             <connections>
+                <outlet property="loggerImageView" destination="3VA-zp-L9N" id="0KE-Ru-db7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="NqJ-MS-Qtd"/>
                 <outlet property="weekLogsTableView" destination="sF5-BK-Dlf" id="yQG-4C-KwJ"/>
                 <outlet property="weekTotalLabel" destination="kbM-Na-TdY" id="whQ-2I-cM7"/>
@@ -22,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxP-E9-nIZ">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3VA-zp-L9N">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3VA-zp-L9N">
                             <rect key="frame" x="230" y="45" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="9V8-Ce-BqV"/>

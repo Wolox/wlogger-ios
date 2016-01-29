@@ -12,9 +12,11 @@ import Argo
 import Result
 
 private let WeekLogsPath = "http://private-6f65cb-wlogger.apiary-mock.com/v1/logs"
+private let WeekLogsAmountPath = "http://private-6f65cb-wlogger.apiary-mock.com/v1/users/week_time"
 
 public typealias JSONResult = _Result<AnyObject, NSError>.InternalResult
 public typealias LogsResult = _Result<[Log], RepositoryError>.InternalResult
+public typealias LogsAmountResult = _Result<String, RepositoryError>.InternalResult
 
 public extension Alamofire.Request {
     
@@ -53,6 +55,13 @@ public struct APILogRepository: LogRepositoryType {
             .flatMap(.Concat) { _, _ , data  in self.deserializeLogs(data) }
     }
 
+    public func getWeekLogsAmount() -> SignalProducer<String, RepositoryError> {
+        return Alamofire.request(Alamofire.Method.GET, WeekLogsAmountPath, parameters: nil)
+            .response()
+            .flatMapError { SignalProducer(error: RepositoryError.RequestError($0)) }
+            .flatMap(.Concat) { _, _ , data  in self.deserializeLogsAmount(data) }
+    }
+    
 }
 
 private extension APILogRepository {
@@ -79,3 +88,29 @@ private extension APILogRepository {
     }
     
 }
+
+private extension APILogRepository {
+    
+    func decodeLogsAmount(JSON: AnyObject) -> LogsAmountResult {
+        guard let internalJSON = JSON as? [String : AnyObject], let logsJSON = internalJSON["worked_hours"] else {
+            let error = RepositoryError.JSONError(NSError(domain: "", code: 0, userInfo: nil))
+            return LogsAmountResult(error: error)
+        }
+        
+        let decodedLogsAmount: Decoded<String> = decode(logsJSON)
+        switch decodedLogsAmount {
+        case .Success(let logsAmount): return LogsAmountResult(value: logsAmount)
+        case .Failure(let error): return LogsAmountResult(error: RepositoryError.DecodeError(error))
+        }
+    }
+    
+    func deserializeLogsAmount(data: NSData) -> SignalProducer<String, RepositoryError> {
+        return SignalProducer.attempt {
+            NSJSONSerialization.JSONObjectWithData(data)
+                .mapError { RepositoryError.JSONError($0) }
+                .flatMap { self.decodeLogsAmount($0) }
+        }
+    }
+    
+}
+
