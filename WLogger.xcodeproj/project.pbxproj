@@ -34,7 +34,7 @@
 		E1FC551C1C42C92700C7CC91 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC551B1C42C92700C7CC91 /* LogTableViewCell.swift */; };
 		E1FC551E1C42CC2D00C7CC91 /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC551D1C42CC2D00C7CC91 /* LogViewModel.swift */; };
 		E1FC55201C42D00100C7CC91 /* WeekLogsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC551F1C42D00100C7CC91 /* WeekLogsTableViewModel.swift */; };
-		E1FC55221C42DE2300C7CC91 /* LogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55211C42DE2300C7CC91 /* LogRepository.swift */; };
+		E1FC55221C42DE2300C7CC91 /* LogRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55211C42DE2300C7CC91 /* LogRepositoryType.swift */; };
 		E1FC55241C42DE3100C7CC91 /* APILogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +103,7 @@
 		E1FC551B1C42C92700C7CC91 /* LogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogTableViewCell.swift; path = WeekLogs/LogTableViewCell/LogTableViewCell.swift; sourceTree = "<group>"; };
 		E1FC551D1C42CC2D00C7CC91 /* LogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogViewModel.swift; path = WeekLogs/LogTableViewCell/LogViewModel.swift; sourceTree = "<group>"; };
 		E1FC551F1C42D00100C7CC91 /* WeekLogsTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekLogsTableViewModel.swift; path = WeekLogs/WeekLogsTableViewModel.swift; sourceTree = "<group>"; };
-		E1FC55211C42DE2300C7CC91 /* LogRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogRepository.swift; path = Repository/LogRepository.swift; sourceTree = "<group>"; };
+		E1FC55211C42DE2300C7CC91 /* LogRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogRepositoryType.swift; path = Repository/LogRepositoryType.swift; sourceTree = "<group>"; };
 		E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APILogRepository.swift; path = Repository/APILogRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,7 +224,7 @@
 		E1DA84031C39CAD10019FB4E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				E1FC55211C42DE2300C7CC91 /* LogRepository.swift */,
+				E1FC55211C42DE2300C7CC91 /* LogRepositoryType.swift */,
 				E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */,
 				E14410B21C57F1C500834334 /* InternalResult.swift */,
 			);
@@ -390,7 +390,7 @@
 				E1FC550E1C42C5A200C7CC91 /* Log.swift in Sources */,
 				E1FC551C1C42C92700C7CC91 /* LogTableViewCell.swift in Sources */,
 				E1FC55131C42C6EA00C7CC91 /* WeekLogsViewController.swift in Sources */,
-				E1FC55221C42DE2300C7CC91 /* LogRepository.swift in Sources */,
+				E1FC55221C42DE2300C7CC91 /* LogRepositoryType.swift in Sources */,
 				E14410B31C57F1C500834334 /* InternalResult.swift in Sources */,
 				E1FC550A1C42C55900C7CC91 /* Project.swift in Sources */,
 				E1FC55171C42C73800C7CC91 /* WeekLogsTableViewController.swift in Sources */,

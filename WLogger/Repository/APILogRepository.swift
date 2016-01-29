@@ -44,7 +44,7 @@ public extension NSJSONSerialization {
     
 }
 
-public struct APILogRepository: LogRepository {
+public struct APILogRepository: LogRepositoryType {
 
     public func getWeekLogs() -> SignalProducer<[Log], RepositoryError> {
         return Alamofire.request(Alamofire.Method.GET, WeekLogsPath, parameters: nil)

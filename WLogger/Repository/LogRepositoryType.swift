@@ -1,5 +1,5 @@
 //
-//  LogRepository.swift
+//  LogRepositoryType.swift
 //  WLogger
 //
 //  Created by Pablo Giorgi on 1/10/16.
@@ -15,7 +15,7 @@ public enum RepositoryError: ErrorType {
     case DecodeError(Argo.DecodeError)
 }
 
-public protocol LogRepository {
+public protocol LogRepositoryType {
 
     func getWeekLogs() -> SignalProducer<[Log], RepositoryError>
     

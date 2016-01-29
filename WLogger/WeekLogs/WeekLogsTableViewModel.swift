@@ -24,7 +24,7 @@ public class WeekLogsTableViewModel {
         return _logs.value.count
     }
     
-    public init(logRepository: LogRepository) {
+    public init(logRepository: LogRepositoryType) {
         fetchLogs = Action { _ in
             let logsProducer = logRepository.getWeekLogs().observeOn(UIScheduler())
             return mapArray(logsProducer) { LogViewModel(log: $0) }
