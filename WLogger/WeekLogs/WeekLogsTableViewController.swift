@@ -31,15 +31,9 @@ extension WeekLogsTableViewController {
             }
         }
         
-        viewModel?.fetchLogs.apply("").start { [unowned self] event in
-            switch event {
-            case .Next(_):
-                print("Before reload table....")
-                self.tableView.reloadData()
-            case .Failed(let error):
-                print("Error fetching logs \(error)")
-            default: break
-            }
+        viewModel?.logs.producer.startWithNext { _ in self.tableView.reloadData() }
+        viewModel?.fetchLogs.apply("").startWithFailed { error in
+            // TODO handle error
         }
     }
 

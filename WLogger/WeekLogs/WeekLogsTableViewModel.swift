@@ -17,6 +17,7 @@ func mapArray<ArrayValue, NewValue, Error: ErrorType>(producer: SignalProducer<[
 public class WeekLogsTableViewModel {
     
     private let _logs = MutableProperty<[LogViewModel]>([])
+    public let logs: AnyProperty<[LogViewModel]>
     public let fetchLogs: Action<AnyObject, [LogViewModel], RepositoryError>
     
     public var numberOfLogs: Int {
@@ -31,6 +32,7 @@ public class WeekLogsTableViewModel {
         }
         
         _logs <~ fetchLogs.values
+        self.logs = AnyProperty(_logs)
     }
     
     public subscript(index: Int) -> LogViewModel {
