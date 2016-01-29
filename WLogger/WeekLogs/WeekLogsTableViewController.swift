@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeekLogsTableViewController: UITableViewController {
+final class WeekLogsTableViewController: UITableViewController {
 
     var viewModel: WeekLogsTableViewModel?
 }
