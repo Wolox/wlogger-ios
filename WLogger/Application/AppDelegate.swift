@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        window!.rootViewController = getRootViewController()
-        window!.makeKeyAndVisible()
+        window?.rootViewController = getRootViewController()
+        window?.makeKeyAndVisible()
 
         return true
     }
