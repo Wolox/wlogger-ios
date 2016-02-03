@@ -14,29 +14,24 @@ public class WeekLogsViewModel {
     public let weekTotalTitle: String
     
     private let logsAmount = MutableProperty<String>("")
-    public let fetchLogsAmount: Action<AnyObject, String, RepositoryError>
+    let fetchLogsAmount: SignalProducer<String, RepositoryError>
     
     private let loggerImage = MutableProperty<UIImage?>(nil)
-    public let fetchLoggerImage: Action<AnyObject, UIImage?, NSError>
+    let fetchLoggerImage: SignalProducer<UIImage, ImageFetcherError>
+    static private let FetchLoggerImagePath = "http://www.wired.com/wp-content/uploads/2015/09/google-logo.jpg"
     
     public let weekLogsTableViewModel: WeekLogsTableViewModel
     
-    public init(imageFetcher: ImageFetcher, logRepository: LogRepository) {
+    public init(imageFetcher: ImageFetcher = fetchImage, logRepository: LogRepositoryType) {
         weekTotalTitle = "week total"
         weekLogsTableViewModel = WeekLogsTableViewModel(logRepository: logRepository)
-
-        fetchLogsAmount = Action { _ in
-            let logsProducer = logRepository.getWeekLogsAmount().observeOn(UIScheduler())
-            return logsProducer.map( { $0 } )
-        }
-        logsAmount <~ fetchLogsAmount.values
-
-        fetchLoggerImage = Action { _ in
-            let profileImagePath = "http://www.wired.com/wp-content/uploads/2015/09/google-logo.jpg"
-            let profileImageProducer = imageFetcher.fetchImage(NSURL(string: profileImagePath)!).producer
-            return profileImageProducer.map( { $0 } )
-        }
-        loggerImage <~ fetchLoggerImage.values
+        
+        self.fetchLogsAmount =  logRepository.getWeekLogsAmount().observeOn(UIScheduler())
+        logsAmount <~ fetchLogsAmount.flatMapError { _ in SignalProducer.empty }
+        
+        let fetchLoggerImageURL = NSURL(string: WeekLogsViewModel.FetchLoggerImagePath)!
+        self.fetchLoggerImage = imageFetcher(fetchLoggerImageURL).replayLazily(1).observeOn(UIScheduler())
+        loggerImage <~ fetchLoggerImage.flatMapError { _ in SignalProducer.empty }.map { $0 }
     }
     
 }

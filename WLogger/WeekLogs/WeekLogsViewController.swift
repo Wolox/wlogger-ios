@@ -21,7 +21,7 @@ class WeekLogsViewController: UIViewController {
 
     internal init() {
         _weekLogsTableViewController = WeekLogsTableViewController(nibName:String(WeekLogsTableViewController), bundle:nil)
-        _weekLogsViewModel = WeekLogsViewModel(imageFetcher: ImageFetcher(), logRepository: APILogRepository())
+        _weekLogsViewModel = WeekLogsViewModel(logRepository: APILogRepository())
         
         super.init(nibName: String(WeekLogsViewController), bundle: nil)
     }
@@ -39,7 +39,7 @@ extension WeekLogsViewController {
         self.weekTotalTitleLabel.text = "week_total".localize.capitalizedString
         
         self.weekTotalLabel.text = String()
-        _weekLogsViewModel.fetchLogsAmount.apply("").start { [unowned self] event in
+        _weekLogsViewModel.fetchLogsAmount.start { [unowned self] event in
             switch event {
             case .Next(let logsAmount):
                 self.weekTotalLabel.text = logsAmount;
@@ -50,7 +50,7 @@ extension WeekLogsViewController {
         }
         
         self.loggerImageView.image = nil
-        _weekLogsViewModel.fetchLoggerImage.apply("").start { [unowned self] event in
+        _weekLogsViewModel.fetchLoggerImage.start { [unowned self] event in
             switch event {
             case .Next(let loggerImage):
                 self.loggerImageView.image = loggerImage;
