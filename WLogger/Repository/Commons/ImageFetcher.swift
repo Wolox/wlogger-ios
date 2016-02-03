@@ -9,10 +9,23 @@
 import Foundation
 import ReactiveCocoa
 
-public struct  ImageFetcher {
-    
-    public func fetchImage(imageURL: NSURL) -> SignalProducer<UIImage?, NSError> {
-        return NSURLSession.sharedSession().rac_dataWithRequest(NSURLRequest(URL: imageURL)).map { UIImage(data: $0.0) }
-    }
+public enum ImageFetcherError: ErrorType {
+    case InvalidImageFormat
+    case FetchError(NSError)
+}
 
+public typealias ImageProducer = SignalProducer<UIImage, ImageFetcherError>
+public typealias ImageFetcher = NSURL -> ImageProducer
+
+public func fetchImage(imageURL: NSURL) -> ImageProducer {
+    return NSURLSession.sharedSession()
+        .rac_dataWithRequest(NSURLRequest(URL: imageURL))
+        .flatMapError { SignalProducer(error: .FetchError($0)) }
+        .flatMap(.Concat) { data, _ -> ImageProducer in
+            if let image = UIImage(data: data) {
+                return SignalProducer(value: image)
+            } else {
+                return SignalProducer(error: .InvalidImageFormat)
+            }
+    }
 }
