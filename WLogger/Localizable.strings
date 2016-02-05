@@ -1,3 +1,8 @@
 // Week logs
 
 "week_total" = "week total";
+
+// Log detail
+
+"duration" = "duration";
+"date" = "date";

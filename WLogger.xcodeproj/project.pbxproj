@@ -12,6 +12,8 @@
 		E10F6EE41C5AA2710012B11C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F6EE31C5AA2710012B11C /* StringExtension.swift */; };
 		E10F6EE91C5AA7D80012B11C /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F6EE81C5AA7D80012B11C /* ImageFetcher.swift */; };
 		E14410B31C57F1C500834334 /* InternalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14410B21C57F1C500834334 /* InternalResult.swift */; };
+		E16459641C5BFDC7005C29B8 /* LogDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16459631C5BFDC7005C29B8 /* LogDetailViewController.xib */; };
+		E16459661C5BFDE7005C29B8 /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16459651C5BFDE7005C29B8 /* LogDetailViewController.swift */; };
 		E166FC831C57DCE2000AFAA5 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC821C57DCE2000AFAA5 /* Curry.framework */; };
 		E166FC841C57DCE2000AFAA5 /* Curry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E166FC821C57DCE2000AFAA5 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1DA83BA1C39AF7B0019FB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DA83B91C39AF7B0019FB4E /* Assets.xcassets */; };
@@ -83,6 +85,8 @@
 		E10F6EE31C5AA2710012B11C /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		E10F6EE81C5AA7D80012B11C /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = Repository/Commons/ImageFetcher.swift; sourceTree = "<group>"; };
 		E14410B21C57F1C500834334 /* InternalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalResult.swift; sourceTree = "<group>"; };
+		E16459631C5BFDC7005C29B8 /* LogDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogDetailViewController.xib; path = LogDetail/LogDetailViewController.xib; sourceTree = "<group>"; };
+		E16459651C5BFDE7005C29B8 /* LogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogDetailViewController.swift; path = LogDetail/LogDetailViewController.swift; sourceTree = "<group>"; };
 		E166FC7D1C56ED61000AFAA5 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		E166FC821C57DCE2000AFAA5 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		E1DA83AF1C39AF7B0019FB4E /* WLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,15 @@
 			name = Commons;
 			sourceTree = "<group>";
 		};
+		E16459621C5BFC58005C29B8 /* LogDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E16459631C5BFDC7005C29B8 /* LogDetailViewController.xib */,
+				E16459651C5BFDE7005C29B8 /* LogDetailViewController.swift */,
+			);
+			name = LogDetail;
+			sourceTree = "<group>";
+		};
 		E1DA83A61C39AF7B0019FB4E = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				E10F6EE21C5AA25A0012B11C /* Extensions */,
+				E16459621C5BFC58005C29B8 /* LogDetail */,
 				E1FC550F1C42C6A100C7CC91 /* WeekLogs */,
 				E1DA84031C39CAD10019FB4E /* Repository */,
 				E1DA84001C39C3740019FB4E /* Model */,
@@ -250,9 +264,8 @@
 		E1DA84031C39CAD10019FB4E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				E1FC55211C42DE2300C7CC91 /* LogRepositoryType.swift */,
 				E10F6EE71C5AA5D10012B11C /* Commons */,
-				E1FC55211C42DE2300C7CC91 /* LogRepository.swift */,
+				E1FC55211C42DE2300C7CC91 /* LogRepositoryType.swift */,
 				E1FC55231C42DE3100C7CC91 /* APILogRepository.swift */,
 				E14410B21C57F1C500834334 /* InternalResult.swift */,
 			);
@@ -390,6 +403,7 @@
 			files = (
 				E10F6EE11C5AA1DE0012B11C /* Localizable.strings in Resources */,
 				E1FC55151C42C72500C7CC91 /* WeekLogsTableViewController.xib in Resources */,
+				E16459641C5BFDC7005C29B8 /* LogDetailViewController.xib in Resources */,
 				E1FC551A1C42C90D00C7CC91 /* LogTableViewCell.xib in Resources */,
 				E1DA83BA1C39AF7B0019FB4E /* Assets.xcassets in Resources */,
 				E1FC55111C42C6D200C7CC91 /* WeekLogsViewController.xib in Resources */,
@@ -420,6 +434,7 @@
 				E1FC550E1C42C5A200C7CC91 /* Log.swift in Sources */,
 				E10F6EE91C5AA7D80012B11C /* ImageFetcher.swift in Sources */,
 				E1FC551C1C42C92700C7CC91 /* LogTableViewCell.swift in Sources */,
+				E16459661C5BFDE7005C29B8 /* LogDetailViewController.swift in Sources */,
 				E10F6EE41C5AA2710012B11C /* StringExtension.swift in Sources */,
 				E1FC55131C42C6EA00C7CC91 /* WeekLogsViewController.swift in Sources */,
 				E1FC55221C42DE2300C7CC91 /* LogRepositoryType.swift in Sources */,

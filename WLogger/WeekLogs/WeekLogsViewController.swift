@@ -61,6 +61,7 @@ extension WeekLogsViewController {
         }
         
         let weekLogsTableViewController = getWeekLogsTableViewController()
+        self.addChildViewController(weekLogsTableViewController)
         weekLogsTableView.addSubview(weekLogsTableViewController.view)
     }
     

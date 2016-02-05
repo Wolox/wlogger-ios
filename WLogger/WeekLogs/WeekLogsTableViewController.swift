@@ -63,4 +63,11 @@ extension WeekLogsTableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let logViewModel = viewModel?[indexPath.row] {
+            let logDetailViewController: UIViewController = LogDetailViewController(logViewModel: logViewModel)
+            self.parentViewController?.navigationController?.pushViewController(logDetailViewController, animated: true)
+        }
+    }
+    
 }

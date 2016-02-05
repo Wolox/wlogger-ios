@@ -25,9 +25,9 @@ public struct LogViewModel {
 }
 
 private func secondsStringFormatted(var seconds: Int) -> String {
-    let hours = seconds % 3600
+    let hours = seconds / 3600
     seconds = seconds - 3600 * hours
-    let minutes = seconds % 60
+    let minutes = seconds / 60
     seconds = seconds - 60 * minutes
-    return "\(hours)\(minutes):\(seconds)"
+    return "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
 }
